@@ -7,6 +7,8 @@
     --gb-bg-darker: #e0e0e0;
     --gb-logo-color: #ff9614;
     --gb-logo-shadow-color: #a69683;
+    --gb-light-color: #b7b4b8;
+    --gb-primary-color: #4e3969;
 }
 
 /*reset*/
@@ -44,6 +46,7 @@ img{
         ul{
             list-style: none;
             line-height: 2rem;
+            margin-top: 1.5rem;
         }
     }
 }
@@ -56,7 +59,7 @@ img{
 
 
 #app_header{
-    background-color: var(--gb-bg-lighter);
+    background-color: var(--gb-bg-color);
 
     h1{
         color: var(--gb-logo-color);
@@ -74,6 +77,75 @@ img{
 
 
 
+.recipe{
+
+    
+
+    .subtitle{
+        display: inline-block;
+        text-transform: uppercase;
+        color: var(--gb-light-color);
+        padding: 1.5rem 0;
+    }
+
+        .title{
+            color: var(--gb-primary-color);
+            padding-bottom: 1.5rem;
+        }
+    
+}
+
+.socials{
+    padding: 1rem 0;
+
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .icon{
+        background-color: var(--gb-bg-lighter);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.75rem;
+
+
+        span{
+            display: none;
+        }
+    }
+}
+
+.banner{
+    display: none;
+}
+
+.presentation{
+    
+    h2{
+        margin-bottom: 1.5rem;
+    }
+
+    hr{
+        width: 20%;
+        margin-bottom: 1rem;
+        color: var(--gb-logo-color);
+    }
+
+    img{
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+
+    }
+
+    p{
+        line-height: 2rem;
+    }
+
+}
 
 
 
@@ -84,6 +156,11 @@ img{
 /*tablet*/
 @media screen and (min-width: 768px)
 {
+    .container{
+        max-width: 720px;
+    }
+
+
     #app_header{
 
         padding: 0 1rem;
@@ -92,5 +169,67 @@ img{
             text-align: left;
         }
     }
+
+    .card, .card-body{
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 5rem;
+            row-gap: 1.5rem;
+            
+        }
+
+    }
+
+    .socials{
+        
+    
+        .icon{
+            span{
+                display: inline;
+            }
+        }
+    }
+
+    .banner{
+        display: block;
+    }
+
+    .presentation{
+
+        padding: 2rem 0;
+
+        img{
+            float: left;
+            margin-right: 1rem;
+        }
+    }
+
+
 }
 
+/*desktop*/
+
+@media screen and (min-width: 992px)
+{
+    .container{
+        max-width: 920px;
+    }
+
+
+
+    .card{
+        display: flex;
+
+        .card-preview{
+            width: 70%;
+        }
+
+        .card-body{
+
+            ul{
+            display: block;
+        }
+    }
+}
+}
